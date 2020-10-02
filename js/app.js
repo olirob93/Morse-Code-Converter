@@ -1,15 +1,14 @@
 
-//grab button
-const engToMorse = document.querySelector('.eng-to-morse');
+//grab eng to morse button
+const engToMorseBtn = document.querySelector('.eng-to-morse');
 //grab english input
 const englishText = document.querySelector('.english-text');
 //grab display input
 const morseText = document.querySelector('.morse-text');
-
-const morseToEng = document.querySelector('.morse-to-eng')
-
-//create event listner for button 
-
+//grab morse to eng button
+const morseToEng = document.querySelector('.morse-to-eng');
+//grab clear button
+const clearBtn = document.querySelector('.clear');
 
 function convertToMorse () {
 
@@ -44,7 +43,12 @@ morseText.value = convertedText
 
 };
 
-function convertToEng () {
+function clear () {
+englishText.value = '';
+morseText.value = ''
+}
+
+/*function convertToEng () {
 
     const alphaBet = [
        ' ', 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'
@@ -75,11 +79,12 @@ for (var i = 0; i < textValue.length; i++) {
 //display it in morse box
 morseText.value = convertedText
 
-};
+};*/
     
-engToMorse.addEventListener('click', convertToMorse)
+engToMorseBtn.addEventListener('click', convertToMorse);
+clearBtn.addEventListener('click', clear);
 
-engToMorse.addEventListener('click', convertToEng)
+//engToMorse.addEventListener('click', convertToEng)
 
 
 
