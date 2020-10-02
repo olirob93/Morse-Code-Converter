@@ -1,4 +1,3 @@
-
 //grab eng to morse button
 const engToMorseBtn = document.querySelector('.eng-to-morse');
 //grab english input
@@ -23,6 +22,10 @@ function convertToMorse () {
 
 //grab english text value
 let textValue = englishText.value;
+//if nothing entered display error
+if (englishText.value == ''){
+  return  alert('enter some english text to convert');
+}
 //new empty string to display converted text
 let convertedText = '';
 

@@ -15,7 +15,12 @@ function convertToMorse() {
   var alphaBet = [' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
   var morseCode = [' ', '.-', '-...', '-.-.', '-..', '.', '..-.', '--.', '....', '..', '.---', '-.-', '.-..', '--', '-.', '---', '.--.', '--.-', '.-.', '...', '-', '..--', '...-', '.--', '-..-', '-.--', '--..']; //grab english text value
 
-  var textValue = englishText.value; //new empty string to display converted text
+  var textValue = englishText.value; //if nothing entered display error
+
+  if (englishText.value == '') {
+    return alert('enter some english text to convert');
+  } //new empty string to display converted text
+
 
   var convertedText = ''; //loop over english text value
 
